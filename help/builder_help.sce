@@ -1,4 +1,4 @@
-// This file is released under the 3-clause BSD license. See COPYING-BSD.
+// This file is released under CeCILL.
 
 here = get_absolute_file_path("builder_help.sce");
 d = dir(here);

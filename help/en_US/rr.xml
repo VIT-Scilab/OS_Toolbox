@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- * This file is released under the 3-clause BSD license. See COPYING-BSD.
+ * This file is released under CeCILL.
  *
  -->
 <refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns3="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="rr" xml:lang="en">
@@ -10,7 +10,7 @@
     </refnamediv>
     <refsynopsisdiv>
         <title>Syntax</title>
-        <synopsis>[sum_turnaround,sum_wait] = rr(at,bt,n,time_quantum)</synopsis>
+        <synopsis>[sum_turnaround,sum_wait] = rr(at,bt,n,time_quantum,p)</synopsis>
     </refsynopsisdiv>
     <refsection>
         <title>Arguments</title>
@@ -39,6 +39,14 @@
 		    <para>The threshold time limit for each process execution</para>
                 </listitem>
                </varlistentry>
+			   <varlistentry>
+                <term>p</term>
+                <listitem>
+					<para>The value of this determines whether to print the output or not(1/0).</para>
+					<para>The default (optional parameter) value of this is 0.</para>
+					<para>If the value is 0 it will only return otherwise it will print and return.</para>
+                </listitem>
+             </varlistentry>
             <varlistentry>
                 <term>sum_turnaround</term>
                 <listitem>
@@ -59,7 +67,10 @@
     </refsection>
     <refsection>
         <title>Examples</title>
-        <programlisting role="example">[sum_turnaround,sum_wait] = rr([0,1,2,3],[5,4,2,1],4,2)</programlisting>
+        <programlisting role="example">//Without printing
+[sum_turnaround,sum_wait] = rr([0,1,2,3],[5,4,2,1],4,2)</programlisting>
+		<programlisting role="example">//With printing
+[sum_turnaround,sum_wait] = rr([0,1,2,3],[5,4,2,1],4,2,1)</programlisting>
 		<programlisting role="example">[sum_turnaround,sum_wait] = rr([0,1,2,3,4],[5,3,1,2,3],5,2)</programlisting>
     </refsection>
 </refentry>

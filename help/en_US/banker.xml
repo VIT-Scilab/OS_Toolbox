@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- * This file is released under the 3-clause BSD license. See COPYING-BSD.
+ * This file is released under CeCILL.
  *
  -->
 <refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns3="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="banker" xml:lang="en">
@@ -10,7 +10,7 @@
     </refnamediv>
     <refsynopsisdiv>
         <title>Syntax</title>
-        <synopsis> Available = banker(Alloc,Max,Available,p,r)</synopsis>
+        <synopsis> [ret,available] = banker(Alloc,Max,Available,p,r,pr)</synopsis>
     </refsynopsisdiv>
     <refsection>
         <title>Arguments</title>
@@ -45,6 +45,28 @@
                     <para>Total Number of resources in the system</para>
                 </listitem>
             </varlistentry>
+			<varlistentry>
+                <term>pr</term>
+                <listitem>
+		    <para>The value of this determines whether to print the output or not(1/0).</para>
+					<para>The default (optional parameter) value of this is 0.</para>
+					<para>If the value is 0 it will only return otherwise it will print and return.</para>
+                </listitem>
+             </varlistentry>
+			 <varlistentry>
+                <term>ret</term>
+                <listitem>
+		    <para>The value of this determines whether the system is in safe or unsafe state.</para>
+					<para>If it returns 1 then the system is in safe state.</para>
+					<para>If it returns 0 then the system is in unsafe state.</para>
+                </listitem>
+             </varlistentry>
+			 <varlistentry>
+                <term>available</term>
+                <listitem>
+					<para>Available vector after the execution of all the processes in array format.</para>
+                </listitem>
+             </varlistentry>
         </variablelist>
     </refsection>
     <refsection>
@@ -53,8 +75,10 @@
     </refsection>
     <refsection>
         <title>Examples</title>
-        <programlisting role="example">Available = banker([3,0,1,4;2,2,1,0;3,1,2,1;0,5,1,0;4,2,1,2],[4,2,1,2;5,2,5,2;2,3,1,6;1,4,2,4;3,6,6,5],[1,5,2,0],5,4)</programlisting>
-		<programlisting role="example">Available = banker([0,0,1,2;1,0,0,0;1,3,5,4;0,6,3,2;0,0,1,4], [0,0,1,2;1,7,5,0;2,3,5,6;0,6,5,2;0,6,5,6],[1,5,2,0],5,4)</programlisting>
+        <programlisting role="example">[ret,available]= banker([3,0,1,4;2,2,1,0;3,1,2,1;0,5,1,0;4,2,1,2],[4,2,1,2;5,2,5,2;2,3,1,6;1,4,2,4;3,6,6,5],[1,5,2,0],5,4)</programlisting>
+		<programlisting role="example">[ret,available] = banker([0,0,1,2;1,0,0,0;1,3,5,4;0,6,3,2;0,0,1,4], [0,0,1,2;1,7,5,0;2,3,5,6;0,6,5,2;0,6,5,6],[1,5,2,0],5,4,1)</programlisting>
+		<programlisting role="example">//with only the return value whether it is safe or unsafe without printing the output
+ret = banker([0,0,1,2;1,0,0,0;1,3,5,4;0,6,3,2;0,0,1,4], [0,0,1,2;1,7,5,0;2,3,5,6;0,6,5,2;0,6,5,6],[1,5,2,0],5,4)</programlisting>
     </refsection>
     <refsection role="see also">
         <title>See also</title>

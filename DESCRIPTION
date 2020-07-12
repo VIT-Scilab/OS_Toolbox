@@ -1,24 +1,7 @@
-// Modify this file to provide a description of your toolbox.
-// This file is used by Atoms GUI in scilab, to show information about the toolbox.
-//
-// Note that it will NOT be used when publishing your toolbox on http://atoms.scilab.org;
-// the present file is only used if you distribute your toolbox yourself.
-// On the http://atoms.scilab.org site, only the information you provide there is used.
-//
-//
-// Lines starting with // are comments
-// (you can remove all the comments designed to help you)
-// Lines starting with a space are continuation of the previous field.
-// Empty lines separate fields.
-
-
-// Unique identifier for this toolbox.
-// It must be alphanumeric, start with a letter and contain neither space
-// nor special characters other than underscore or dash.
-Toolbox: OS_toolbox
+Toolbox: os
 
 // Human-friendly name for your toolbox
-Title: OS_Toolbox
+Title: OS
 
 // One-line description for your toolbox
 Summary: Implementation of different OS algorithms in scilab.
@@ -55,7 +38,7 @@ Entity: Scilab Enterprises
 WebSite: http://www.scilab.org
 
 // License under which the toolbox will be published
-License: GPL 2.0
+License: CeCILL
 
 // Version of Scilab supported by this toolbox,
 // prefixed by =, >= ...

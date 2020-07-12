@@ -1,3 +1,40 @@
+/*****************************************************************************
+Copyright © 2020 
+
+Authors: Surya Prasad S, Yeshwanth R, Tharun Bhargav A, Aravind Krishna R, Dr. Maheswari R
+Organization: VIT Chennai
+Email: suryavirat09@gmail.com, yeshwa.rp@gmail.com, tharun.cam@gmail.com, aravind2000krishna@gmail, maheswari.r@vit.ac.in 
+
+This file must be used under the terms of CeCILL. This source file is licensed as described in the file LICENSE, 
+which you should have received as part of this distribution.  The terms are also available at
+https://cecill.info/licences/Licence_CeCILL_V2-en.txt 
+
+This software is governed by the CeCILL  license under French law and
+abiding by the rules of distribution of free software.  You can  use, 
+modify and/ or redistribute the software under the terms of the CeCILL
+license as circulated by CEA, CNRS and INRIA at the following URL
+"http://www.cecill.info". 
+
+As a counterpart to the access to the source code and  rights to copy,
+modify and redistribute granted by the license, users are provided only
+with a limited warranty  and the software's author,  the holder of the
+economic rights,  and the successive licensors  have only  limited
+liability. 
+
+In this respect, the user's attention is drawn to the risks associated
+with loading,  using,  modifying and/or developing or reproducing the
+software by the user in light of its specific status of free software,
+that may mean  that it is complicated to manipulate,  and  that  also
+therefore means  that it is reserved for developers  and  experienced
+professionals having in-depth computer knowledge. Users are therefore
+encouraged to load and test the software's suitability as regards their
+requirements in conditions enabling the security of their systems and/or 
+data to be ensured and,  more generally, to use and operate it in the 
+same conditions as regards security. 
+
+The fact that you are presently reading this means that you have had
+knowledge of the CeCILL license and that you accept its terms.
+**********************************************************************************/
 // Function to sort the processes in the order of arrival time
 function [] = sort_processes(pro,at,bt,n)
     for i=2:n
@@ -17,7 +54,10 @@ function [] = sort_processes(pro,at,bt,n)
     end
 endfunction
 
-function [sum_turnaround,sum_wait] = rr(at,bt,n,time_quantum)
+function [sum_turnaround,sum_wait] = rr(at,bt,n,time_quantum,p)
+    if ~exists("p","local") then
+        p = 0
+    end
     sum_turnaround = 0;
 sum_wait = 0;
 t = 0;
@@ -29,8 +69,10 @@ t = 0;
         rt(i) = bt(i);
     end
     sum_wait = at(1);
-    mprintf("\n\nProcess     Arrival Time      Burst Time      Completion Time      Turnaround Time     Waiting Time\n")
-        // Preemption Of processes and calculate completion time
+    if p==1 then
+        mprintf("\n\nProcess     Arrival Time      Burst Time      Completion Time      Turnaround Time     Waiting Time\n")
+    end
+            // Preemption Of processes and calculate completion time
         temp = n;
         time = 0;
         while temp ~= 0
@@ -46,7 +88,9 @@ t = 0;
                 end
             if rt(i) == 0 && t == 1 then
                 temp = temp -1;
+                if p==1 then
                 mprintf("P%d\t\t%d\t\t%d\t\t%d\t\t%d\t\t\t%d\n",pro(i),at(i),bt(i),time,time-at(i),time-at(i)-bt(i))
+                end
                 // Calculate Average Wait and Turnaround Time
                 sum_wait  = sum_wait + time -at(i) -bt(i);
                 sum_turnaround  = sum_turnaround + time -at(i);
@@ -63,6 +107,9 @@ t = 0;
             end
         end
     end
- mprintf("\nAvg Waiting Time = %f\n",sum_wait*1.0/n)
+    if  p==1 then
+        mprintf("\nAvg Waiting Time = %f\n",sum_wait*1.0/n)
  mprintf("Avg Turn Around Time = %f",sum_turnaround*1.0/n)
+    end
+ 
 endfunction       

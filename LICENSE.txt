@@ -1,21 +1,8 @@
 Copyright © 2020 
 
 Authors: Surya Prasad S, Yeshwanth R, Tharun Bhargav A, Aravind Krishna R, Dr. Maheswari R
-Organization: VIT, Chennai
-Email: suryavirat09@gmail.com, yeshwa.rp@gmail.com, tharun.cam@gmail.com, aravind2000krishna@gmail, Maheswari.r@vit.ac.in 
-
-
-This toolbox integrates the functionalities of OpenMP with Scilab and it is licensed under the terms of CeCILL, 
-full license text can be found below or at
-https://cecill.info/licences/Licence_CeCILL_V2-en.txt 
-
-Third-party components - Credits
-
-This toolbox uses Open Source components, their details are mentioned below. We acknowledge and are grateful to these developers 
-for their contributions to open source.
-
-This software uses the GNU OpenMP library (libgomp),  an open source software which enables parallel programming in C, C++ and 
-Fortran, and it is licensed under the terms of GNU GPL v3.0.
+Organization: VIT Chennai
+Email: suryavirat09@gmail.com, yeshwa.rp@gmail.com, tharun.cam@gmail.com, aravind2000krishna@gmail, maheswari.r@vit.ac.in 
 
 License
 

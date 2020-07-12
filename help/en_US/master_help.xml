@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book [
+<!--Begin Entities-->
+<!ENTITY ab31d4e09f402e5db0f8f109b4904d608 SYSTEM "file:///C:/Users/SRP/Documents/1.TOOLBOX codes/OS_Toolbox/help/en_US/banker.xml">
+<!ENTITY ae2525a0077a5058258918a1728159192 SYSTEM "file:///C:/Users/SRP/Documents/1.TOOLBOX codes/OS_Toolbox/help/en_US/bestfit.xml">
+<!ENTITY afc1d4842f45e14faaeea8fc3580878d1 SYSTEM "file:///C:/Users/SRP/Documents/1.TOOLBOX codes/OS_Toolbox/help/en_US/clook.xml">
+<!ENTITY a88113a762e003122533d838464c6c39a SYSTEM "file:///C:/Users/SRP/Documents/1.TOOLBOX codes/OS_Toolbox/help/en_US/fcfs.xml">
+<!ENTITY aeec9dc92c155772ac67b459aff89cfc0 SYSTEM "file:///C:/Users/SRP/Documents/1.TOOLBOX codes/OS_Toolbox/help/en_US/firstfit.xml">
+<!ENTITY a4152c40dbe4106b95b515f699733a70b SYSTEM "file:///C:/Users/SRP/Documents/1.TOOLBOX codes/OS_Toolbox/help/en_US/get_total_thread.xml">
+<!ENTITY a5614a26bf0848b0d663a1ab9fab1fb1d SYSTEM "file:///C:/Users/SRP/Documents/1.TOOLBOX codes/OS_Toolbox/help/en_US/look.xml">
+<!ENTITY a04481406ef8e5e7f1c21634895d07afb SYSTEM "file:///C:/Users/SRP/Documents/1.TOOLBOX codes/OS_Toolbox/help/en_US/lru.xml">
+<!ENTITY a757e72e19cdba378985d263c3f299b79 SYSTEM "file:///C:/Users/SRP/Documents/1.TOOLBOX codes/OS_Toolbox/help/en_US/mqueue.xml">
+<!ENTITY af141b171726f5e93e140bb8295dc7424 SYSTEM "file:///C:/Users/SRP/Documents/1.TOOLBOX codes/OS_Toolbox/help/en_US/npriority.xml">
+<!ENTITY aa34031558c8c985730af0200c1e4c73f SYSTEM "file:///C:/Users/SRP/Documents/1.TOOLBOX codes/OS_Toolbox/help/en_US/optimal.xml">
+<!ENTITY a57bbcb51f1ad8fd5c9d69c51620163ad SYSTEM "file:///C:/Users/SRP/Documents/1.TOOLBOX codes/OS_Toolbox/help/en_US/priority.xml">
+<!ENTITY a1f29381b905dfd47f28a534bf41d2e2d SYSTEM "file:///C:/Users/SRP/Documents/1.TOOLBOX codes/OS_Toolbox/help/en_US/rr.xml">
+<!ENTITY a7b605b5a5a015262da1f33efb1c8caea SYSTEM "file:///C:/Users/SRP/Documents/1.TOOLBOX codes/OS_Toolbox/help/en_US/sjf.xml">
+<!ENTITY a086c8c186d6648fa584202c39ed20f6e SYSTEM "file:///C:/Users/SRP/Documents/1.TOOLBOX codes/OS_Toolbox/help/en_US/srtf.xml">
+<!ENTITY a65388b97aa5b5c48242930e10a0aee55 SYSTEM "file:///C:/Users/SRP/Documents/1.TOOLBOX codes/OS_Toolbox/help/en_US/sstf.xml">
+<!ENTITY aa9900849cc2e6f9b6cbcb0a7a4670df0 SYSTEM "file:///C:/Users/SRP/Documents/1.TOOLBOX codes/OS_Toolbox/help/en_US/worstfit.xml">
+<!--End Entities-->
+]>
+<book version="5.0-subset Scilab" xml:lang="en_US"
+      xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:mml="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <info xml:id='os_toolbox_manual'>
+    <title>OS_toolbox</title>
+  </info>
+
+<part xml:id='section_5ce82cb65f63513bac4581af0c8fd3c8'>
+<title>OS_toolbox</title>
+&ab31d4e09f402e5db0f8f109b4904d608;
+&ae2525a0077a5058258918a1728159192;
+&afc1d4842f45e14faaeea8fc3580878d1;
+&a88113a762e003122533d838464c6c39a;
+&aeec9dc92c155772ac67b459aff89cfc0;
+&a4152c40dbe4106b95b515f699733a70b;
+&a5614a26bf0848b0d663a1ab9fab1fb1d;
+&a04481406ef8e5e7f1c21634895d07afb;
+&a757e72e19cdba378985d263c3f299b79;
+&af141b171726f5e93e140bb8295dc7424;
+&aa34031558c8c985730af0200c1e4c73f;
+&a57bbcb51f1ad8fd5c9d69c51620163ad;
+&a1f29381b905dfd47f28a534bf41d2e2d;
+&a7b605b5a5a015262da1f33efb1c8caea;
+&a086c8c186d6648fa584202c39ed20f6e;
+&a65388b97aa5b5c48242930e10a0aee55;
+&aa9900849cc2e6f9b6cbcb0a7a4670df0;
+</part>
+</book>

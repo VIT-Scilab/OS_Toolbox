@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * This file is released under the 3-clause BSD license. See COPYING-BSD.
+ *
+ -->
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns3="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="firstfit" xml:lang="en">
+    <refnamediv>
+        <refname>firstfit</refname>
+        <refpurpose>First Fit partition allocation algorithm.</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Syntax</title>
+        <synopsis>[block_no, block_size] = firstfit(process, block, p)</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Arguments</title>
+        <variablelist>
+		<varlistentry>
+                <term>process</term>
+                <listitem>
+                    <para>The array containing the size of each process.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>block</term>
+                <listitem>
+                    <para>The array containing the size of each block.</para>
+                </listitem>
+            </varlistentry>
+			<varlistentry>
+                <term>p</term>
+                <listitem>
+                    <para>The value of this determines whether to print the output or not(1/0).</para>
+					<para>The default (optional parameter) value of this is 0.</para>
+					<para>If the value is 0 it will only return otherwise it will print and return.</para>
+                </listitem>
+            </varlistentry>
+            
+            <varlistentry>
+                <term>block_no</term>
+                <listitem>
+                    <para>The array containing the positions of the allocated blocks, where the index of the array refers to 
+						  the process number and the value of the array refers to the block position or number. If the value stored in the 
+						  array is -1, it indicates that no block could be allocated for the process.
+					</para>
+                </listitem>
+            </varlistentry>
+			<varlistentry>
+                <term>block_size</term>
+                <listitem>
+                    <para>The array containing the sizes of the allocated blocks, where the index of the array refers to 
+						  the process number and the value of the array refers to the block size. If the value stored in the
+						  array is -1, it indicates that no block could be allocated for the process.
+					</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>Description</title>
+        <para>This function takes in an array of process sizes and block sizes and returns the positions and sizes 
+			  of the blocks allocated according to the First Fit partition allocation algorithm.
+		</para>
+    </refsection>
+    <refsection>
+        <title>Examples</title>
+        <programlisting role="example">[block_no, block_size]  = firstfit([90,20,50,200],[50,100,90,200,60], 1);</programlisting>
+		<programlisting role="example">[block_no, block_size]  = firstfit([90,20,50,200],[50,100,90,200,60], 0);</programlisting>
+    </refsection>
+</refentry>

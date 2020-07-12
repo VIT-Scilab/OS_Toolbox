@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * This file is released under the 3-clause BSD license. See COPYING-BSD.
+ *
+ -->
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns3="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="look" xml:lang="en">
+    <refnamediv>
+        <refname>look</refname>
+        <refpurpose>LOOK Disk Scheduling Algorithm.</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Syntax</title>
+        <synopsis>[tot_seek, seq] = look(head, ar, p)</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Arguments</title>
+        <variablelist>
+		<varlistentry>
+                <term>head</term>
+                <listitem>
+                    <para>The initial position of the disk head.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>ar</term>
+                <listitem>
+                    <para>This array represents the request array containing the disk track numbers.</para>
+                </listitem>
+            </varlistentry>
+			<varlistentry>
+                <term>p</term>
+                <listitem>
+                    <para>The value of this determines whether to print the output or not(1/0).</para>
+					<para>The default (optional parameter) value of this is 0.</para>
+					<para>If the value is 0 it will only return otherwise it will print and return.</para>
+                </listitem>
+            </varlistentry>
+            
+            <varlistentry>
+                <term>tot_seek</term>
+                <listitem>
+                    <para>The total seek count.</para>
+                </listitem>
+            </varlistentry>
+			<varlistentry>
+                <term>seq</term>
+                <listitem>
+                    <para>The array containing the seek sequence, the sequence in which requests are serviced.</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>Description</title>
+        <para>This function takes in an array of disk track numbers and returns the total seek count and seek sequence
+			  according to the LOOK Disk scheduling algorithm.
+		</para>
+    </refsection>
+    <refsection>
+        <title>Examples</title>
+        <programlisting role="example">[tot_seek, seq] = look(50, [176, 79, 34, 60,92, 11, 41, 114 ], 1);</programlisting>
+		<programlisting role="example">[tot_seek, seq] = look(50, [176, 79, 34, 60,92, 11, 41, 114 ], 0);</programlisting>
+    </refsection>
+</refentry>

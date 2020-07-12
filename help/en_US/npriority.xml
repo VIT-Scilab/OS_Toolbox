@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * This file is released under the 3-clause BSD license. See COPYING-BSD.
+ *
+ -->
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns3="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="npriority" xml:lang="en">
+    <refnamediv>
+        <refname>npriority</refname>
+        <refpurpose>Non premptive priority scheduling.</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Syntax</title>
+        <synopsis>[a,b] = npriority(n,priority,at,bt,p)</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Arguments</title>
+        <variablelist>
+		<varlistentry>
+                <term>n</term>
+                <listitem>
+                    <para>Number of processes.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>priority</term>
+                <listitem>
+                    <para>Priority queue as an array format.</para>
+                </listitem>
+            </varlistentry>
+			<varlistentry>
+                <term>at</term>
+                <listitem>
+                    <para>Arrival time of processes as an array.</para>
+                </listitem>
+            </varlistentry>
+			<varlistentry>
+                <term>bt</term>
+                <listitem>
+                    <para>Burst time of processes as an array.</para>
+                </listitem>
+            </varlistentry>
+			<varlistentry>
+                <term>p</term>
+                <listitem>
+                    <para>The value of this determines whether to print the output or not(1/0).</para>
+					<para>The default (optional parameter) value of this is 0.</para>
+					<para>if the value is 0 it will only retun otherwise it will print and return.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>a</term>
+                <listitem>
+                    <para>Turn around time for the processes as an array.</para>
+                </listitem>
+            </varlistentry>
+			<varlistentry>
+                <term>b</term>
+                <listitem>
+                    <para>Process id in the order of execution as an array.</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>Description</title>
+        <para>This function takes in arrival time,burst time and priority of different processes and returns the turnaround time and proccess id through non-premptive priority scheduling algorithm. </para>
+    </refsection>
+    <refsection>
+        <title>Examples</title>
+        <programlisting role="example">//Only returns turnaround time
+tat=npriority(5,[5,3,1,2,4],[3,2,15,1,10],[20,34,12,14,24])</programlisting>
+		<programlisting role="example">//Returns the turn around time and prints the output
+tat=npriority(5,[5,3,1,2,4],[3,2,15,1,10],[20,34,12,14,24],1)</programlisting>
+		<programlisting role="example">//Returns the turn around time and process id and prints the output
+[tat,p]=npriority(5,[5,3,1,2,4],[3,2,15,1,10],[20,34,12,14,24],1)</programlisting>
+</refsection>
+</refentry>

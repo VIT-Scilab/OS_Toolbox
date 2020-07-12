@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * This file is released under the 3-clause BSD license. See COPYING-BSD.
+ *
+ -->
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns3="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="mqueue" xml:lang="en">
+    <refnamediv>
+        <refname>mqueue</refname>
+        <refpurpose>Executes the multilevel scheduling algorithm.</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Syntax</title>
+        <synopsis>[a,b,c] = mqueue(n,at,bt,p)</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Arguments</title>
+        <variablelist>
+		<varlistentry>
+                <term>n</term>
+                <listitem>
+                    <para>Number of processes.</para>
+                </listitem>
+            </varlistentry>
+		<varlistentry>
+                <term>at</term>
+                <listitem>
+                    <para>Arrival time of the processes as an array.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>bt</term>
+                <listitem>
+                    <para>Birst time of the processes.</para>
+                </listitem>
+            </varlistentry>
+			<varlistentry>
+                <term>p</term>
+                <listitem>
+                    <para>The value of this determines whether to print the output or not(1/0).</para>
+					<para>The default (optional parameter) value of this is 0.</para>
+					<para>if the value is 0 it will only retun otherwise it will print and return.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>a</term>
+                <listitem>
+                    <para>Turn around time of the processes executing in queue 1.</para>
+                </listitem>
+            </varlistentry>
+			<varlistentry>
+                <term>b</term>
+                <listitem>
+                    <para>Turnaround time of the processes executing in queue 2.</para>
+                </listitem>
+            </varlistentry>
+			<varlistentry>
+                <term>c</term>
+                <listitem>
+                    <para>Turnaround time of the processes executing in queue 3.</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>Description</title>
+       <para>This function takes in arrival time and burst time of different processes and returns the turnaround time and proccess id through multilevel queue scheduling algorithm. </para>
+	   <para>Each level has different scheduling algorithm here the first level has roundrobin scheduling with time quantum =5, the next level with time quantum=8 and the third level schedules through FCFS algorithm.</para>
+    </refsection>
+    <refsection>
+        <title>Examples</title>
+        <programlisting role="example">//Only returns the Turnaround time in first queue.
+a=mqueue(5,[1,2,3,5,4],[24,12,4,60,45])</programlisting>
+		<programlisting role="example">//Returns the Turnaround time in different queues and prints the output
+[a,b,c]=mqueue(5,[1,2,3,5,4],[24,12,4,60,45],1)</programlisting>
+    </refsection>
+    <refsection role="see also">
+        <title>See also</title>
+        <simplelist type="inline">
+            <member>
+                <link linkend="sstf">sstf</link>
+            </member>
+            <member>
+                <link type="scilab" linkend="scilab.help/sum">Link to the Scilab help page</link>
+            </member>
+        </simplelist>
+    </refsection>
+</refentry>

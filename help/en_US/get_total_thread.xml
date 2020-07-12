@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * This file is released under the 3-clause BSD license. See COPYING-BSD.
+ *
+ -->
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns3="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="get_total_thread" xml:lang="en">
+    <refnamediv>
+
+<refname>get_total_thread</refname>
+
+<refpurpose>Get the total number of threads running in the parallel region.</refpurpose>
+
+</refnamediv>
+    <refsynopsisdiv>
+
+<title>Syntax</title>
+
+<synopsis>a = get_total_thread(Void)</synopsis>
+
+</refsynopsisdiv>
+    <refsection>
+
+<title>Arguments</title>
+
+
+<variablelist>
+
+
+<varlistentry>
+
+<term>Void</term>
+
+
+<listitem>
+
+<para>No arguments needed.</para>
+
+</listitem>
+
+</varlistentry>
+
+<varlistentry>
+
+<term>a</term>
+
+
+<listitem>
+
+<para>Output argument (returns total number of threads)</para>
+
+</listitem>
+
+</varlistentry>
+
+</variablelist>
+
+</refsection>
+   <refsection>
+
+<title>Description</title>
+
+<para></para>
+
+<para>This function returns the total number of threads running in the parallel region. </para>
+
+
+-<para>
+This function inturn calls the omp_get_num_threads in C.
+</para>
+
+</refsection>
+<refsection>
+
+<title>Examples</title>
+
+<programlisting role="example">a=get_total_thread()</programlisting>
+
+</refsection>
+</refentry>

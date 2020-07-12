@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * This file is released under the 3-clause BSD license. See COPYING-BSD.
+ *
+ -->
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns3="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="rr" xml:lang="en">
+    <refnamediv>
+        <refname>rr</refname>
+        <refpurpose>Round Robin Scheduling Algorithm</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Syntax</title>
+        <synopsis>[sum_turnaround,sum_wait] = rr(at,bt,n,time_quantum)</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Arguments</title>
+        <variablelist>
+		<varlistentry>
+                <term>at</term>
+                <listitem>
+                    <para>Arrival time of 'n' processes in a vector of size (1xn)</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>bt</term>
+                <listitem>
+                    <para>Burst time of 'n' processes in a vector of size (1xn)</para>
+                </listitem>
+            </varlistentry>
+			<varlistentry>
+                <term>n</term>
+                <listitem>
+                    <para>Number of processes</para>
+                </listitem>
+            </varlistentry>
+			<varlistentry>
+                <term>time_quantum</term>
+                <listitem>
+		    <para>The threshold time limit for each process execution</para>
+                </listitem>
+               </varlistentry>
+            <varlistentry>
+                <term>sum_turnaround</term>
+                <listitem>
+                    <para>The total turnaround time of 'n' processes in order.</para>
+                </listitem>
+            </varlistentry>
+			<varlistentry>
+                <term>sum_wait</term>
+                <listitem>
+                    <para>The total waiting time of 'n' processes in order.</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>Description</title>
+        <para>This function takes in the number of processes, time quantum for each process,arrival time,burst time and returns the total waiting time and total turnaround time using Round Robin scheduling algorithm.</para>
+    </refsection>
+    <refsection>
+        <title>Examples</title>
+        <programlisting role="example">[sum_turnaround,sum_wait] = rr([0,1,2,3],[5,4,2,1],4,2)</programlisting>
+		<programlisting role="example">[sum_turnaround,sum_wait] = rr([0,1,2,3,4],[5,3,1,2,3],5,2)</programlisting>
+    </refsection>
+</refentry>

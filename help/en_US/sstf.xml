@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * This file is released under the 3-clause BSD license. See COPYING-BSD.
+ *
+ -->
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns3="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="sstf" xml:lang="en">
+    <refnamediv>
+        <refname>sstf</refname>
+        <refpurpose>Shortest seek time first Disk scheduling algorithm.</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Syntax</title>
+        <synopsis>[a,b] = sstf(ar,initial_pos,p,g)</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Arguments</title>
+        <variablelist>
+		<varlistentry>
+                <term>ar</term>
+                <listitem>
+                    <para>Seek positions in an array format.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>initial_pos</term>
+                <listitem>
+                    <para>The starting position of the head.</para>
+                </listitem>
+            </varlistentry>
+			<varlistentry>
+                <term>p</term>
+                <listitem>
+                    <para>The value of this determines whether to print the output or not(1/0).</para>
+					<para>The default (optional parameter) value of this is 0.</para>
+					<para>if the value is 0 it will only retun otherwise it will print and return.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>g</term>
+                <listitem>
+                    <para>The value of this determines whether to display the graph or not(1/0).</para>
+					<para>The default (optional parameter) value of this is 0.</para>
+					<para>if the value is 0 it won't display the comparison graph.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>a</term>
+                <listitem>
+                    <para>Seek sequence.</para>
+                </listitem>
+            </varlistentry>
+			<varlistentry>
+                <term>b</term>
+                <listitem>
+                    <para>Total seek count.</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>Description</title>
+        <para>This function takes in different seek positions as an array and reutrn the seek sequence and total seek count using shortest seek time first algorithm.</para>
+		<para>It also displays the graphical comparison of ffcs seek vs sstf seek for the given seek positions.</para>
+    </refsection>
+    <refsection>
+        <title>Examples</title>
+        <programlisting role="example">//Only returns the seek sequence
+a=sstf([52,62,120,114,20],45)</programlisting>
+		<programlisting role="example">//Returns the seek sequence and prints the output
+a=sstf([52,62,120,114,20],45,1)</programlisting>
+		<programlisting role="example">//Returns the seek sequence and seek count and displays the comparison graph
+[a,s]=sstf([52,62,120,114,20],45,g=1)</programlisting>
+		<programlisting role="example">//Returns the seek sequence and seek count,prints the output and also displays the comparison graph
+[a,s]=sstf([52,62,120,114,20],45,1,1)</programlisting>
+    </refsection>
+    <refsection role="see also">
+        <title>See also</title>
+        <simplelist type="inline">
+            <member>
+                <link linkend="nonpremptive_priority">nonpremptive_priority</link>
+            </member>
+            <member>
+                <link type="scilab" linkend="scilab.help/sum">Link to the Scilab help page</link>
+            </member>
+        </simplelist>
+    </refsection>
+</refentry>

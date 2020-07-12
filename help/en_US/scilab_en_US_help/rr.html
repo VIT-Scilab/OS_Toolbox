@@ -1,0 +1,79 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>rr</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="priority.html">&lt;&lt; priority</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_5ce82cb65f63513bac4581af0c8fd3c8.html">OS_toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="sjf.html">sjf &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">OS_toolbox</a> &gt;&gt; <a href="section_5ce82cb65f63513bac4581af0c8fd3c8.html">OS_toolbox</a> &gt; rr</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">rr</h1>
+        <p class="refpurpose">Round Robin Scheduling Algorithm</p></div>
+    <div class="refsynopsisdiv"><h3 class="title">Syntax</h3>
+        <div class="synopsis"><pre><span class="default">[</span><span class="default">sum_turnaround</span><span class="default">,</span><span class="default">sum_wait</span><span class="default">] = </span><span class="functionid">rr</span><span class="default">(</span><span class="default">at</span><span class="default">,</span><span class="default">bt</span><span class="default">,</span><span class="default">n</span><span class="default">,</span><span class="default">time_quantum</span><span class="default">)</span></pre></div></div>
+    <div class="refsection"><h3 class="title">Arguments</h3>
+        <dl><dt><span class="term">at</span>
+                <dd><p class="para">Arrival time of &#0039;n&#0039; processes in a vector of size (1xn)</p></dd></dt>
+            <dt><span class="term">bt</span>
+                <dd><p class="para">Burst time of &#0039;n&#0039; processes in a vector of size (1xn)</p></dd></dt>
+			<dt><span class="term">n</span>
+                <dd><p class="para">Number of processes</p></dd></dt>
+			<dt><span class="term">time_quantum</span>
+                <dd><p class="para">The threshold time limit for each process execution</p></dd></dt>
+            <dt><span class="term">sum_turnaround</span>
+                <dd><p class="para">The total turnaround time of &#0039;n&#0039; processes in order.</p></dd></dt>
+			<dt><span class="term">sum_wait</span>
+                <dd><p class="para">The total waiting time of &#0039;n&#0039; processes in order.</p></dd></dt></dl></div>
+    <div class="refsection"><h3 class="title">Description</h3>
+        <p class="para">This function takes in the number of processes, time quantum for each process,arrival time,burst time and returns the total waiting time and total turnaround time using Round Robin scheduling algorithm.</p></div>
+    <div class="refsection"><h3 class="title">Examples</h3>
+        <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabopenclose">[</span><span class="scilabid">sum_turnaround</span><span class="scilabdefault">,</span><span class="scilabid">sum_wait</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">rr</span><span class="scilabopenclose">(</span><span class="scilabopenclose">[</span><span class="scilabnumber">0</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilabnumber">5</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">]</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div>
+		<div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabopenclose">[</span><span class="scilabid">sum_turnaround</span><span class="scilabdefault">,</span><span class="scilabid">sum_wait</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">rr</span><span class="scilabopenclose">(</span><span class="scilabopenclose">[</span><span class="scilabnumber">0</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">4</span><span class="scilabopenclose">]</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilabnumber">5</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabdefault">,</span><span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">,</span><span class="scilabnumber">5</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="priority.html">&lt;&lt; priority</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_5ce82cb65f63513bac4581af0c8fd3c8.html">OS_toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="sjf.html">sjf &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

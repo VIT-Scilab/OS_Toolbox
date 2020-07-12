@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * This file is released under the 3-clause BSD license. See COPYING-BSD.
+ *
+ -->
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns3="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="priority" xml:lang="en">
+    <refnamediv>
+        <refname>priority</refname>
+        <refpurpose>Premptive Priority Scheduling Algorithm</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Syntax</title>
+        <synopsis>[turnaround, waiting] = priority(n,pri,at,bt,p)</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Arguments</title>
+        <variablelist>
+		<varlistentry>
+                <term>n</term>
+                <listitem>
+                    <para>Number of processes.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>pri</term>
+                <listitem>
+                    <para>Priority of each process in a vector of size (1xn)</para>
+                </listitem>
+            </varlistentry>
+			<varlistentry>
+                <term>at</term>
+                <listitem>
+                    <para>The arrival time of 'n' processes in a vector of size (1xn)</para>
+                </listitem>
+            </varlistentry>
+			<varlistentry>
+                <term>bt</term>
+                <listitem>
+		    <para> The Burst time of 'n' processes in a vector of size (1xn) </para>
+                </listitem>
+               </varlistentry>
+  		<varlistentry>
+                <term>p</term>
+                <listitem>
+		    <para>The value of this determines whether to print the output or not(1/0).</para>
+					<para>The default (optional parameter) value of this is 0.</para>
+					<para>If the value is 0 it will only return otherwise it will print and return.</para>
+                </listitem>
+            
+             </varlistentry>
+            <varlistentry>
+                <term>turnaround</term>
+                <listitem>
+                    <para>The turnaround time of 'n' processes in order.</para>
+                </listitem>
+            </varlistentry>
+			<varlistentry>
+                <term>waiting</term>
+                <listitem>
+                    <para>The waiting time of 'n' processes in order.</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>Description</title>
+        <para>This function takes in the number of processes, priority of processes,arrival time,burst time and returns the waiting time and turnaround time as an vector using preemptive priority scheduling algorithm.</para>
+    </refsection>
+    <refsection>
+        <title>Examples</title>
+        <programlisting role="example">[turnaround, waiting] = priority(4,[3,2,1,4],[3, 5, 6, 2, 6],[6,2,14,6], 1)</programlisting>
+		<programlisting role="example">[turnaround, waiting] = priority(4,[3,2,1,4],[3, 5, 6, 2, 6],[6,2,14,6], 0)</programlisting>
+    </refsection>
+</refentry>

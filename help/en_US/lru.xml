@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * This file is released under the 3-clause BSD license. See COPYING-BSD.
+ *
+ -->
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ns3="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:db="http://docbook.org/ns/docbook" version="5.0-subset Scilab" xml:id="lru" xml:lang="en">
+    <refnamediv>
+        <refname>lru</refname>
+        <refpurpose>Least recently used page replacement algorithm.</refpurpose>
+    </refnamediv>
+    <refsynopsisdiv>
+        <title>Syntax</title>
+        <synopsis>[faults] = lru(no_frames, no_pages, ref_string, p)</synopsis>
+    </refsynopsisdiv>
+    <refsection>
+        <title>Arguments</title>
+        <variablelist>
+		<varlistentry>
+                <term>no_frames</term>
+                <listitem>
+                    <para>Number of frames.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>no_pages</term>
+                <listitem>
+                    <para>Number of pages.</para>
+                </listitem>
+            </varlistentry>
+			<varlistentry>
+                <term>ref_string</term>
+                <listitem>
+                    <para>Page reference string in an array format.</para>
+                </listitem>
+            </varlistentry>
+			<varlistentry>
+                <term>p</term>
+                <listitem>
+                    <para>The value of this determines whether to print the output or not(1/0).</para>
+					<para>The default (optional parameter) value of this is 0.</para>
+					<para>If the value is 0 it will only return otherwise it will print and return.</para>
+                </listitem>
+            </varlistentry>
+            
+            <varlistentry>
+                <term>faults</term>
+                <listitem>
+                    <para>Number of page faults.</para>
+                </listitem>
+            </varlistentry>
+
+        </variablelist>
+    </refsection>
+    <refsection>
+        <title>Description</title>
+        <para>This function takes in the number of frames, number of pages and the reference string and returns the number of page faults using least recently used page replacement algorithm.</para>
+    </refsection>
+    <refsection>
+        <title>Examples</title>
+        <programlisting role="example">[faults] = lru(3, 7, [1, 3, 0, 3, 5, 6, 3], 1)</programlisting>
+		<programlisting role="example">[faults] = lru(3, 7, [1, 3, 0, 3, 5, 6, 3], 0)</programlisting>
+    </refsection>
+    <refsection role="see also">
+        <title>See also</title>
+        <simplelist type="inline">
+            <member>
+                <link linkend="optimal">optimal</link>
+            </member>
+            <member>
+                <link type="scilab" linkend="scilab.help/sum">Link to the Scilab help page</link>
+            </member>
+        </simplelist>
+    </refsection>
+</refentry>
